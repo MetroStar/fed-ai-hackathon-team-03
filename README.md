@@ -2,7 +2,7 @@
 
 <p style="text-align: center;">
   <picture>
-    <img alt="Screenshot" src="https://raw.githubusercontent.com/MetroStar/fed-ai-hackathon-team-03/main/docs/screenshot.png" width="80%">
+    <img alt="Screenshot" src="https://raw.githubusercontent.com/MetroStar/fed-ai-hackathon-team-03/main/docs/screenshot.png">
   </picture>
 </p>
 
