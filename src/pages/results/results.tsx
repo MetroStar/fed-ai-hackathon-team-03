@@ -39,7 +39,7 @@ export const Results = (): React.ReactElement => {
     if (items && !isLoading) {
       setCurrentResults(
         items.filter((result) =>
-          result.title.toLowerCase().includes(searchParams.get('query') || ''),
+          result.title.toLowerCase().includes(searchParams.get('search') || ''),
         ),
       );
     }
