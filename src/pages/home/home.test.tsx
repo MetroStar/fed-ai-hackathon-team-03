@@ -20,7 +20,7 @@ describe('Home', () => {
     await act(async () => {
       expect(baseElement).toBeTruthy();
       expect(baseElement.querySelector('h1')?.textContent).toEqual(
-        'Awards Simple Search',
+        'Simple Search',
       );
     });
   });
