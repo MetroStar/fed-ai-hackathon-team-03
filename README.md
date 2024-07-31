@@ -1,47 +1,44 @@
-# Federal AI Hackathon
-
-This repository serves as a template for your team to create your own repository that you can use to submit your hackathon solution. You are not required to use this repository or GitHub to submit your solution, but you are required to submit all of your materials to us.
-
-## How to use this repository as a template
-
-### Creating a repository
-
-To use this repository, use the "Use this template" button to create a new repository ([see instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)).
-
-When creating a new repository, keep in mind:
-
-* Your repository name must include your team name and your two-digit team ID (example: `my-awesome-team-99`)
-* You must create your team's repository under your own GitHub account or GitHub organization
-* Your repository must be set to public
-* Your repository must allow forking (this is the default when creating a new repository)
-* Your repository must not be deleted until instructed otherwise by hackathon staff
-
-### Submitting your repository
-
-After you create you repository from this template, submit your repository's URL to the hackathon staff on Slack. Please submit the full URL, such as [https://github.com/octocat/Spoon-Knife](https://github.com/octocat/Spoon-Knife). We will then fork your repository and keep our fork updated.
-
-### Using the repository
-
-* The `slides` directory is for your team's final presentations. Please ensure your slides are in this directory at the time of judging.
-* You may place any and all files you wish to submit in this repository, using any project structure.
-* Please consider keeping this README file, but delete all of this template text and customize it with helpful information about your solution. There is no specific format you should follow, but you can refer to the example sections below for some ideas.
+# AI-GovLINK
 
 ## Introduction
 
-In this section, you can briefly introduce the solution. Overall, what does it do? What problem does it solve?
+AI-GovLINK aims to bridge the gap between complex government information and its intended audiences, whether human or artificial, to improve understanding and utilization of government data. Without impacting any current functionality, we can augment a website and its associated knowledge base so that it is discoverable and usable by emerging AI technology.
 
 ## Features
 
-In this section, you can describe the features your solution has.
+- Embedded instructional prompting for AI agents
+- Enhanced knowledge retrieval for AI Agent
+- Optimized conversational content exploration vs keyword-based search (Query Instructions, Query Examples, Chain of Thought)
+- AI Optimized Badge to provide explainability to the end-user
 
 ## Installation
 
-In this section, you can describe how to get started with your solution. This could include configuring the environment and your solution, installing prerequisites, etc.
+### Accessing AI-GovLINK POC
+
+To access the POC, navigate to the following URL: https://staging.d1ry1fe2t57064.amplifyapp.com/
+
+### Running the Project Locally
+
+1. To install dependencies, run the following:
+
+```sh
+npm install
+```
+
+2. To start the app, run the following:
+
+```sh
+npm run dev
+```
 
 ## Usage
 
-In this section, you can describe how to use the solution.
+Note: this site contains mocked data and is not intended to be used as a production example. This site is intended to be used, to support AI Agent/LLM based searches.
+
+The below examples are intended to be used from something like ChatGPT, Groq, etc.
 
 ## Examples
 
-In this section, you can provide practical examples of how one would use the solution.
+- I want to submit a proposal to NSF to understand and process animal sounds and language. Is my idea or topic already funded at NSF? Which program and program officer can I talk to about my idea?”
+
+- I want to know about the awards made to <abc> organization/university by area of science and award size. In addition, tell me if the Principal Investigators or Co-Principal Investigators on any of the awards appear on awards to other organizations, break that down by area of science as well.
