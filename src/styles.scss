@@ -1,0 +1,39 @@
+@forward 'providers/uswds/uswds.scss';
+
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#mainSection {
+  display: unset;
+  flex: 1;
+}
+
+.usa-footer {
+  overflow: visible;
+}
+
+.usa-section {
+  padding-top: 1em;
+}
+
+.usa-form .usa-button {
+  max-height: 40px;
+}
+
+.loading-text {
+  color: #005ea2;
+}
+
+@media screen and (max-width: 768px) {
+  .usa-form .usa-button-group {
+    margin-top: 1.5em;
+  }
+}
