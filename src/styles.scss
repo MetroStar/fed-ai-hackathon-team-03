@@ -20,8 +20,43 @@ body {
   max-width: unset;
 }
 
+.usa-banner {
+  background-color: #162e51;
+  .usa-banner__header-text,
+  .usa-media-block__body {
+    color: #fff;
+  }
+  .usa-banner__button-text {
+    color: #73b3e7;
+  }
+}
+
+.usa-header {
+  .usa-nav__primary > .usa-nav__primary-item > a {
+    color: #0076d6;
+  }
+}
+
 .usa-footer {
   overflow: visible;
+  .usa-footer__primary-section {
+    background-color: #162e51;
+    .usa-footer__primary-link {
+      color: #fff;
+    }
+  }
+  .usa-footer__secondary-section {
+    background-color: #005ea2;
+    .usa-footer__contact-heading {
+      color: #fff !important;
+    }
+  }
+  .usa-footer__secondary-section a {
+    color: #fff !important;
+  }
+  .usa-social-link__icon {
+    background-color: #fff;
+  }
 }
 
 .usa-section {

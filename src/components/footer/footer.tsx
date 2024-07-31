@@ -4,7 +4,7 @@ import instagramIcon from '~uswds/dist/img/usa-icons/instagram.svg';
 import rssIcon from '~uswds/dist/img/usa-icons/rss_feed.svg';
 import twitterIcon from '~uswds/dist/img/usa-icons/twitter.svg';
 import youtubeIcon from '~uswds/dist/img/usa-icons/youtube.svg';
-import logo from '/img/logo.svg';
+import logo from '/img/logo--white.svg';
 
 export const Footer = (): React.ReactElement => {
   const scrollToTop = (event: React.MouseEvent<HTMLAnchorElement>): void => {
@@ -24,72 +24,6 @@ export const Footer = (): React.ReactElement => {
           Return to top
         </a>
       </div>
-      <div className="usa-footer__primary-section">
-        <nav className="usa-footer__nav" aria-label="Footer navigation">
-          <ul className="grid-row grid-gap">
-            <li
-              className="
-                mobile-lg:grid-col-4
-                desktop:grid-col-auto
-                usa-footer__primary-content
-              "
-            >
-              <a className="usa-footer__primary-link" href="/#">
-                &lt;Primary link&gt;
-              </a>
-            </li>
-
-            <li
-              className="
-                mobile-lg:grid-col-4
-                desktop:grid-col-auto
-                usa-footer__primary-content
-              "
-            >
-              <a className="usa-footer__primary-link" href="/#">
-                &lt;Primary link&gt;
-              </a>
-            </li>
-
-            <li
-              className="
-                mobile-lg:grid-col-4
-                desktop:grid-col-auto
-                usa-footer__primary-content
-              "
-            >
-              <a className="usa-footer__primary-link" href="/#">
-                &lt;Primary link&gt;
-              </a>
-            </li>
-
-            <li
-              className="
-                mobile-lg:grid-col-4
-                desktop:grid-col-auto
-                usa-footer__primary-content
-              "
-            >
-              <a className="usa-footer__primary-link" href="/#">
-                &lt;Primary link&gt;
-              </a>
-            </li>
-
-            <li
-              className="
-                mobile-lg:grid-col-4
-                desktop:grid-col-auto
-                usa-footer__primary-content
-              "
-            >
-              <a className="usa-footer__primary-link" href="/#">
-                &lt;Primary link&gt;
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
       <div className="usa-footer__secondary-section">
         <div className="grid-container">
           <div className="grid-row grid-gap">
@@ -162,16 +96,16 @@ export const Footer = (): React.ReactElement => {
                 </div>
               </div>
               <h2 className="usa-footer__contact-heading">
-                &lt;Agency Contact Center&gt;
+                Contact Information
               </h2>
               <address className="usa-footer__address">
                 <div className="usa-footer__contact-info grid-row grid-gap">
                   <div className="grid-col-auto">
-                    <a href="tel:1-800-555-5555"> &lt;(800) 555-GOVT&gt; </a>
+                    <a href="tel:(703) 292-5111">(703) 292-5111</a>
                   </div>
                   <div className="grid-col-auto">
                     <a href="mailto:&lt;info@agency.gov&gt;">
-                      &lt;info@agency.gov&gt;
+                      Sign up for email updates
                     </a>
                   </div>
                 </div>
@@ -179,6 +113,89 @@ export const Footer = (): React.ReactElement => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="usa-footer__primary-section">
+        <nav className="usa-footer__nav" aria-label="Footer navigation">
+          <ul className="grid-row grid-gap">
+            <li
+              className="
+                mobile-lg:grid-col-4
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a className="usa-footer__primary-link" href="/#">
+                Vulnerability Disclosures
+              </a>
+            </li>
+            <li
+              className="
+                mobile-lg:grid-col-4
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a className="usa-footer__primary-link" href="/#">
+                Inspector General
+              </a>
+            </li>
+            <li
+              className="
+                mobile-lg:grid-col-4
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a className="usa-footer__primary-link" href="/#">
+                Privacy
+              </a>
+            </li>
+            <li
+              className="
+                mobile-lg:grid-col-4
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a className="usa-footer__primary-link" href="/#">
+                FOIA
+              </a>
+            </li>
+            <li
+              className="
+                mobile-lg:grid-col-4
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a className="usa-footer__primary-link" href="/#">
+                No FEAT Act
+              </a>
+            </li>
+            <li
+              className="
+                mobile-lg:grid-col-4
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a className="usa-footer__primary-link" href="/#">
+                USA.gov
+              </a>
+            </li>
+            <li
+              className="
+                mobile-lg:grid-col-4
+                desktop:grid-col-auto
+                usa-footer__primary-content
+              "
+            >
+              <a className="usa-footer__primary-link" href="/#">
+                Accessibility
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </footer>
   );
