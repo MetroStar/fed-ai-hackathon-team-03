@@ -1,5 +1,11 @@
 # AI-GovLINK
 
+<p style="text-align: center;">
+  <picture>
+    <img alt="Screenshot" src="https://raw.githubusercontent.com/MetroStar/fed-ai-hackathon-team-03/main/docs/screenshot.png" width="80%">
+  </picture>
+</p>
+
 ## Introduction
 
 AI-GovLINK aims to bridge the gap between complex government information and its intended audiences, whether human or artificial, to improve understanding and utilization of government data. Without impacting any current functionality, we can augment a website and its associated knowledge base so that it is discoverable and usable by emerging AI technology.
