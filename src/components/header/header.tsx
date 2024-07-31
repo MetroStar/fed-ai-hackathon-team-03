@@ -2,15 +2,13 @@ import { Banner, Icon, Search } from '@metrostar/comet-uswds';
 import { APP_TITLE } from '@src/utils/constants';
 import navigation from '@uswds/uswds/js/usa-header';
 import React, { SyntheticEvent, useEffect, useState } from 'react';
-import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
-import useAuth from '../../hooks/use-auth';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 export const Header = (): React.ReactElement => {
+  const navigate = useNavigate();
   const [showMenu, setShowMenu] = useState(false);
 
-  const navigate = useNavigate();
   const location = useLocation();
-  const { isSignedIn, signOut } = useAuth();
 
   const handleMenuClick = (): void => {
     window.scrollTo({ top: 0 });
@@ -36,17 +34,6 @@ export const Header = (): React.ReactElement => {
   useEffect(() => {
     setShowMenu(false);
   }, [location]);
-
-  const handleAuth = (event: SyntheticEvent): void => {
-    event.preventDefault();
-    if (isSignedIn) {
-      signOut();
-      navigate('/');
-    } else {
-      navigate('/signin');
-    }
-  };
-
   return (
     <>
       <a className="usa-skipnav " href="#mainSection">
@@ -79,43 +66,37 @@ export const Header = (): React.ReactElement => {
             <ul className="usa-nav__primary usa-accordion">
               <li className="usa-nav__primary-item">
                 <NavLink
-                  id="home-link"
+                  id="simple-link"
                   to="/"
                   className={`usa-nav__link ${
-                    location.pathname === '/' ? 'usa-current' : ''
+                    location.pathname === '/results' ? 'usa-current' : ''
                   }`}
                 >
-                  Home
+                  Simple Search
                 </NavLink>
               </li>
-              {isSignedIn && (
-                <li className="usa-nav__primary-item">
-                  <NavLink
-                    id="dashboard-link"
-                    to="/dashboard"
-                    className={`usa-nav__link ${
-                      location.pathname === '/dashboard' ? 'usa-current' : ''
-                    }`}
-                  >
-                    Dashboard
-                  </NavLink>
-                </li>
-              )}
               <li className="usa-nav__primary-item">
-                <Link
-                  id="auth-link"
-                  to="/signin"
+                <NavLink
+                  id="advanced-link"
+                  to="/"
                   className={`usa-nav__link ${
-                    location.pathname === '/signin' ? 'usa-current' : ''
+                    location.pathname === '/advanced' ? 'usa-current' : ''
                   }`}
-                  onClick={handleAuth}
                 >
-                  {isSignedIn ? 'Sign Out' : 'Sign In'}
-                </Link>
+                  Advanced Search
+                </NavLink>
               </li>
             </ul>
             <section aria-label="Search component">
-              <Search id="search" type="small" placeholder="Search our Site" />
+              <Search
+                id="search"
+                type="small"
+                placeholder="Search our Site"
+                onSearch={(event: SyntheticEvent) => {
+                  const value = (event.target as HTMLInputElement).value;
+                  navigate(`/results?search=${value}`);
+                }}
+              />
             </section>
           </nav>
         </div>

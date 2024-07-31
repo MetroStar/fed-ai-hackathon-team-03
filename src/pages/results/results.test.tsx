@@ -1,4 +1,4 @@
-import { mockData } from '@src/data/spacecraft';
+import { mockData } from '@src/data/award';
 import axios from '@src/utils/axios';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { act, render } from '@testing-library/react';
@@ -8,9 +8,9 @@ import { BrowserRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 import * as useAuthMock from '../../hooks/use-auth';
 import { User } from '../../types/user';
-import { Dashboard } from './dashboard';
+import { Results } from './results';
 
-describe('Dashboard', () => {
+describe('Results', () => {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
@@ -23,7 +23,7 @@ describe('Dashboard', () => {
       <RecoilRoot>
         <BrowserRouter>
           <QueryClientProvider client={queryClient}>
-            <Dashboard />
+            <Results />
           </QueryClientProvider>
         </BrowserRouter>
       </RecoilRoot>
@@ -41,8 +41,8 @@ describe('Dashboard', () => {
   });
 
   test('should render successfully', async () => {
-    mock.onGet(new RegExp('/spacecraft')).reply(200, mockData);
-    queryClient.setQueryData(['dashboard'], mockData.items);
+    mock.onGet(new RegExp('/awards')).reply(200, mockData);
+    queryClient.setQueryData(['awards'], mockData.items);
     vi.spyOn(useAuthMock, 'default').mockReturnValue({
       isSignedIn: true,
       isLoading: false,
@@ -57,26 +57,8 @@ describe('Dashboard', () => {
       expect(baseElement).toBeTruthy();
     });
 
-    expect(baseElement.querySelector('h1')?.textContent).toEqual('Dashboard');
-    expect(baseElement.querySelectorAll('.VictoryContainer')).toHaveLength(2);
-    expect(baseElement.querySelector('.usa-table')).toBeDefined();
-    expect(
-      baseElement.querySelectorAll('.usa-table > tbody > tr'),
-    ).toHaveLength(0);
-  });
-
-  test('should render with error', async () => {
-    mock
-      .onGet(new RegExp('/spacecraft'))
-      .reply(500, { message: 'Internal Server Error' });
-    queryClient.setQueryData(['dashboard'], null);
-
-    const { baseElement } = render(componentWrapper);
-    await act(async () => {
-      expect(baseElement).toBeTruthy();
-    });
-    expect(baseElement.querySelector('h1')?.textContent).toEqual('Dashboard');
-    expect(baseElement.querySelector('.usa-alert')).toBeDefined();
-    expect(baseElement.querySelector('.usa-alert--error')).toBeDefined();
+    expect(baseElement.querySelector('h1')?.textContent).toEqual(
+      'Search Results',
+    );
   });
 });

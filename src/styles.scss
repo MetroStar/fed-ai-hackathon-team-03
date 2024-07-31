@@ -16,6 +16,10 @@ body {
   flex: 1;
 }
 
+#search-input {
+  max-width: unset;
+}
+
 .usa-footer {
   overflow: visible;
 }

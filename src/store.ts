@@ -3,7 +3,7 @@ import { atom } from 'recoil';
 
 const signedIn = atom({
   key: 'signedIn',
-  default: false,
+  default: true,
 });
 
 const currentUser = atom<User | undefined>({

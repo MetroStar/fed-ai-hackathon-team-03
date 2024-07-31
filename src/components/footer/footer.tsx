@@ -1,11 +1,10 @@
-import { APP_TITLE } from '@src/utils/constants';
 import React from 'react';
 import facebookIcon from '~uswds/dist/img/usa-icons/facebook.svg';
 import instagramIcon from '~uswds/dist/img/usa-icons/instagram.svg';
 import rssIcon from '~uswds/dist/img/usa-icons/rss_feed.svg';
 import twitterIcon from '~uswds/dist/img/usa-icons/twitter.svg';
 import youtubeIcon from '~uswds/dist/img/usa-icons/youtube.svg';
-import logo from '/img/logo.png';
+import logo from '/img/logo.svg';
 
 export const Footer = (): React.ReactElement => {
   const scrollToTop = (event: React.MouseEvent<HTMLAnchorElement>): void => {
@@ -104,12 +103,10 @@ export const Footer = (): React.ReactElement => {
               <div className="mobile-lg:grid-col-auto">
                 <img
                   className="usa-footer__logo-img"
+                  style={{ height: '80px', maxWidth: 'unset' }}
                   src={logo}
-                  alt="US Flag"
+                  alt="NSF Logo"
                 />
-              </div>
-              <div className="mobile-lg:grid-col-auto">
-                <p className="usa-footer__logo-heading">{APP_TITLE}</p>
               </div>
             </div>
             <div className="usa-footer__contact-links mobile-lg:grid-col-6">
