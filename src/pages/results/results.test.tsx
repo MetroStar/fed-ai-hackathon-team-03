@@ -58,7 +58,7 @@ describe('Results', () => {
     });
 
     expect(baseElement.querySelector('h1')?.textContent).toEqual(
-      'Search Results',
+      'Simple Search Results',
     );
   });
 });
