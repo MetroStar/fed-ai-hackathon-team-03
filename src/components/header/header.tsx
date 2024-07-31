@@ -60,49 +60,47 @@ export const Header = (): React.ReactElement => {
               Menu
             </button>
           </div>
+          <div
+            id="ai-optimized-container"
+            className="padding-left-1"
+            style={{ margin: 'auto auto' }}
+          >
+            <Button
+              id="ai-optimized-btn"
+              aria-controls="ai-optimized-modal"
+              data-open-modal
+              style={{
+                display: 'block',
+                width: '250px',
+                backgroundColor: '#FFF5C2',
+                color: '#000',
+              }}
+            >
+              <img style={{ height: '16px' }} src={icon} alt="AI Icon" /> AI
+              Optimized | Learn More
+            </Button>
+            <Modal id="ai-optimized-modal" heading="NSF Search is AI Optimized">
+              <p>
+                The National Science Foundation (NSF) is committed to making
+                scientific research accessible to all. Our website has been
+                GenAI optimized, meaning it has been designed to be easily
+                understood and utilized by advanced AI systems, such as language
+                models (LLMs). This optimization helps ensure that both human
+                users and AI systems can access accurate, reliable information
+                about NSF-funded research.
+              </p>
+              <p>
+                To learn more about how the NSF uses GenAI optimization to
+                improve your experience and promote science literacy, visit our{' '}
+                <a href="/ai-optimized">GenAI Optimization Information Page</a>.
+              </p>
+            </Modal>
+          </div>
           <nav className="usa-nav">
             <button type="button" className="usa-nav__close">
               <Icon id="menu-icon" type="close" />
             </button>
             <ul className="usa-nav__primary usa-accordion">
-              <li
-                className="usa-nav__primary-item"
-                style={{ margin: 'auto auto' }}
-              >
-                <Button
-                  id="ai-optimized-btn"
-                  aria-controls="ai-optimized-modal"
-                  data-open-modal
-                  style={{
-                    height: '30px',
-                    width: '230px',
-                    backgroundColor: '#FFF5C2',
-                    color: '#000',
-                  }}
-                >
-                  <img style={{ height: '16px' }} src={icon} alt="AI Icon" /> AI
-                  Optimized | Learn More
-                </Button>
-                <Modal
-                  id="ai-optimized-modal"
-                  heading="NSF Search is AI Optimized"
-                >
-                  <p>
-                    The National Science Foundation (NSF) is committed to making
-                    scientific research accessible to all. Our website has been
-                    GenAI optimized, meaning it has been designed to be easily
-                    understood and utilized by advanced AI systems, such as
-                    language models (LLMs). This optimization helps ensure that
-                    both human users and AI systems can access accurate,
-                    reliable information about NSF-funded research.
-                  </p>
-                  <p>
-                    To learn more about how the NSF uses GenAI optimization to
-                    improve your experience and promote science literacy, visit
-                    our <a href="#">GenAI Optimization Information Page</a>.
-                  </p>
-                </Modal>
-              </li>
               <li className="usa-nav__primary-item">
                 <NavLink
                   id="simple-link"
