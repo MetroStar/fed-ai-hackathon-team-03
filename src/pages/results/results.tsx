@@ -40,7 +40,7 @@ export const Results = (): React.ReactElement => {
     <div className="grid-container">
       <div className="grid-row padding-bottom-2">
         <div className="grid-col">
-          <h1>Search Results</h1>
+          <h1>Simple Search Results</h1>
           <Search />
         </div>
       </div>
