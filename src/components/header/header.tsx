@@ -67,7 +67,7 @@ export const Header = (): React.ReactElement => {
               <li className="usa-nav__primary-item">
                 <NavLink
                   id="simple-link"
-                  to="/"
+                  to="/results"
                   className={`usa-nav__link ${
                     location.pathname === '/results' ? 'usa-current' : ''
                   }`}
@@ -78,7 +78,7 @@ export const Header = (): React.ReactElement => {
               <li className="usa-nav__primary-item">
                 <NavLink
                   id="advanced-link"
-                  to="/"
+                  to="/advanced"
                   className={`usa-nav__link ${
                     location.pathname === '/advanced' ? 'usa-current' : ''
                   }`}
