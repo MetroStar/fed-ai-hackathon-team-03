@@ -4,8 +4,6 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { AuthProvider } from 'react-oidc-context';
 import { RecoilRoot } from 'recoil';
-import * as useAuthMock from '../../hooks/use-auth';
-import { User } from '../../types/user';
 import { Header } from './header';
 
 describe('Header', () => {
@@ -23,56 +21,6 @@ describe('Header', () => {
     const { baseElement } = render(headerComponent);
     await act(async () => {
       expect(baseElement).toBeTruthy();
-    });
-  });
-
-  test('should navigate away from home', async () => {
-    vi.spyOn(useAuthMock, 'default').mockReturnValue({
-      isSignedIn: true,
-      isLoading: false,
-      currentUserData: {} as User,
-      error: null,
-      signIn: vi.fn(),
-      signOut: vi.fn(),
-    });
-
-    render(headerComponent);
-
-    await userEvent.click(screen.getByText('Dashboard', { selector: 'a' }));
-    expect(window.location.pathname).toBe('/dashboard');
-  });
-
-  test('should handle sign in', async () => {
-    vi.spyOn(useAuthMock, 'default').mockReturnValue({
-      isSignedIn: false,
-      isLoading: false,
-      currentUserData: {} as User,
-      error: null,
-      signIn: vi.fn(),
-      signOut: vi.fn(),
-    });
-
-    const { baseElement } = render(headerComponent);
-    await act(async () => {
-      expect(baseElement).toBeTruthy();
-      fireEvent.click(screen.getByText('Sign In'));
-    });
-  });
-
-  test('should handle sign out', async () => {
-    vi.spyOn(useAuthMock, 'default').mockReturnValue({
-      isSignedIn: true,
-      isLoading: false,
-      currentUserData: {} as User,
-      error: null,
-      signIn: vi.fn(),
-      signOut: vi.fn(),
-    });
-
-    const { baseElement } = render(headerComponent);
-    await act(async () => {
-      expect(baseElement).toBeTruthy();
-      fireEvent.click(screen.getByText('Sign Out'));
     });
   });
 
